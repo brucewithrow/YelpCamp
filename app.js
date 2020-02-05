@@ -1,5 +1,5 @@
-const enVars = { path: __dirname + '/.env' };
-require('dotenv').config(enVars);
+// const enVars = { path: __dirname + '/.env' };
+// require('dotenv').config(enVars);
 
 const express = require('express'),
 	app = express(),
@@ -15,7 +15,7 @@ const express = require('express'),
 	User = require('./models/user');
 // seedDB = require('./seeds.js');
 
-const mongoUrl = process.env['MONGO_DATABASE'];
+const mongoUrl = process.env.MONGO_DATABASE;
 
 // requiring routes
 const commentRoutes = require('./routes/comments'),
