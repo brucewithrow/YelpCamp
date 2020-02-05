@@ -1,6 +1,3 @@
-// const enVars = { path: __dirname + '/.env' };
-// require('dotenv').config(enVars);
-
 const express = require('express'),
 	app = express(),
 	bodyParser = require('body-parser'),
@@ -15,7 +12,8 @@ const express = require('express'),
 	User = require('./models/user');
 // seedDB = require('./seeds.js');
 
-const mongoUrl = process.env.MONGO_DATABASE;
+const mongoUrl = process.env.MONGO_DATABASE || 'mongodb://localhost/yelp_camp_v13';
+console.log(mongoUrl);
 
 // requiring routes
 const commentRoutes = require('./routes/comments'),
